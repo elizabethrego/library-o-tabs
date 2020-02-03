@@ -1,0 +1,11 @@
+getSpotifyAccessToken:
+    handler: src/getSpotifyAccessToken.handler
+    description: Get Spotify access token from redirected URL
+    events:
+      - http:
+          path: getSpotifyAccessToken/handler
+          method: get
+          request:
+            parameters:
+              querystrings:
+                redirected_url: false

@@ -1,0 +1,16 @@
+getTabs:
+    handler: src/getTabs.handler
+    description: Get tabs for song.
+    events:
+      - http:
+          path: getTabs/handler
+          method: get
+          request:
+            parameters:
+              querystrings:
+                artist: true
+                songs: true
+                filters: false
+    environment:
+      SEARCH_ENDPOINT: xxx
+      FILTERS_ENDPOINT_SUFFIX: xxx

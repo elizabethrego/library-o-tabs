@@ -1,0 +1,13 @@
+getSpotifyLibrary:
+    handler: src/getSpotifyLibrary.handler
+    description: Get all artists and their songs from a given Spotify account
+    events:
+      - http:
+          path: getSpotifyLibrary/handler
+          method: get
+          request:
+            parameters:
+              querystrings:
+                spotify_access_token: true
+    environment:
+      SPOTIFY_TRACKS_ENDPOINT: https://api.spotify.com/v1/me/tracks/

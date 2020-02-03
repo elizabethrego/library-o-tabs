@@ -1,0 +1,11 @@
+findTabsForLibrary:
+    handler: src/findTabsForLibrary.handler
+    description: Search for tabs for each song in Spotify library
+    events:
+      - http:
+          path: findTabsForLibrary/handler
+          method: post
+    environment:
+      STRING_SPOTIFY_CONNECTION_ERROR: Sorry, we couldn't connect to your spotify account.
+      STRING_LIBRARY_READ_ERROR: Sorry, we couldn't read songs from your library.
+      STRING_NO_TABS_FOUND_ERROR: Sorry, no tabs found for your library.
